@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using System.Data.SqlClient;
+using System.IO;
 
 
 namespace Sense_Configurator
@@ -192,6 +193,213 @@ namespace Sense_Configurator
                 cmd.ExecuteNonQuery();
             }
         }
+
+        private void btnSetAddresses_Click(object sender, EventArgs e)
+        {
+            frmAddresses addresses = new frmAddresses();
+            addresses.ShowDialog();
+
         }
-    }
+
+        private void txtBoxID_TextChanged(object sender, EventArgs e)
+        {
+            GV.BoxID = txtBoxID.Text;
+        }
+
+        private void txtIP_TextChanged(object sender, EventArgs e)
+        {
+            GV.SenseIP = txtIP.Text;
+        }
+
+        private void txtSubnet_TextChanged(object sender, EventArgs e)
+        {
+            GV.SenseSubnet = txtSubnet.Text;
+        }
+
+        private void txtGateway_TextChanged(object sender, EventArgs e)
+        {
+            GV.SenseGateway = txtGateway.Text;
+        }
+
+        private void txtDNS1_TextChanged(object sender, EventArgs e)
+        {
+            GV.SenseDNS1 = txtDNS1.Text;
+        }
+
+        private void txtDNS2_TextChanged(object sender, EventArgs e)
+        {
+            GV.SenseDNS2 = txtDNS2.Text;
+        }
+
+        private void txtApiID_TextChanged(object sender, EventArgs e)
+        {
+            GV.APIID = txtApiID.Text;
+        }
+
+        private void txtApiKey_TextChanged(object sender, EventArgs e)
+        {
+            GV.APIKey = txtApiKey.Text;
+        }
+
+        private void txtCommPort_TextChanged(object sender, EventArgs e)
+        {
+            GV.SenseSerialCommPort = txtCommPort.Text;
+        }
+
+        private void txtMaxAddress_TextChanged(object sender, EventArgs e)
+        {
+            GV.CurrentMaxAddress = txtMaxAddress.Text;
+        }
+
+        private void txtOccupancyFilter_TextChanged(object sender, EventArgs e)
+        {
+            GV.OccupancyFilter = txtOccupancyFilter.Text;
+        }
+
+        private void txtBrand_TextChanged(object sender, EventArgs e)
+        {
+            GV.Brand = txtBrand.Text;
+        }
+
+        private void txtStoreID_TextChanged(object sender, EventArgs e)
+        {
+            GV.StoreID = txtStoreID.Text;
+        }
+
+        private void chkRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            GV.RadioMode = chkRadio.CheckState.ToString();
+        }
+
+        private void chkLamp_CheckedChanged(object sender, EventArgs e)
+        {
+            GV.LampMode = chkLamp.CheckState.ToString();
+        }
+
+        private void chkBlink_CheckedChanged(object sender, EventArgs e)
+        {
+            GV.BlinkMode = chkBlink.CheckState.ToString();
+        }
+
+        private void chkiPad_CheckedChanged(object sender, EventArgs e)
+        {
+            GV.iPadMode = chkiPad.CheckState.ToString();
+        }
+
+        private void chkOldestCall_CheckedChanged(object sender, EventArgs e)
+        {
+            GV.OldestCallMode = chkOldestCall.CheckState.ToString();
+        }
+
+        private void chkAutoUpload_CheckedChanged(object sender, EventArgs e)
+        {
+            GV.AutoUploadMode = chkAutoUpload.CheckState.ToString();
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
+            //create log file
+            //using (File.Create("log.txt")) ;
+
+            txtBoxID.Text = GV.BoxID;
+            txtIP.Text = GV.SenseIP;
+            txtSubnet.Text = GV.SenseSubnet;
+            txtGateway.Text = GV.SenseGateway;
+            txtDNS1.Text = GV.SenseDNS1;
+            txtDNS2.Text = GV.SenseDNS2;
+            txtApiID.Text = GV.APIID;
+            txtApiKey.Text = GV.APIKey;
+            txtCommPort.Text = GV.SenseSerialCommPort;
+            txtMaxAddress.Text = GV.CurrentMaxAddress;
+            txtOccupancyFilter.Text = GV.OccupancyFilter;
+            txtBrand.Text = GV.Brand;
+            txtStoreID.Text = GV.StoreID;
+
+            if (GV.RadioMode == "true")
+            {
+                chkRadio.Checked = true;
+            }
+            else
+            {
+                chkRadio.Checked = false;
+            }
+
+            if(GV.LampMode == "true")
+            {
+                chkLamp.Checked = true;
+            }
+            else
+            {
+                chkRadio.Checked = false;
+            }
+
+            if(GV.BlinkMode == "true")
+            {
+                chkBlink.Checked = true;
+            }
+            else
+            {
+                chkBlink.Checked = false;
+            }
+
+            if(GV.iPadMode == "true")
+            {
+                chkiPad.Checked = true;
+            }
+            else
+            {
+                chkiPad.Checked = false;
+            }
+
+            if(GV.OldestCallMode == "true")
+            {
+                chkOldestCall.Checked = true;
+            }
+            else
+            {
+                chkOldestCall.Checked = false;
+            }
+
+            if(GV.AutoUploadMode == "true")
+            {
+                chkAutoUpload.Checked = true;
+            }
+            else
+            {
+                chkAutoUpload.Checked = false;
+            }
+        }
+
+        private void btnMakeXML_Click(object sender, EventArgs e)
+        {
+            XML.write("sense.xml", "Root", "Settings", "Radio", "false");
+        }
+
+        private void tmrUpdate_Tick(object sender, EventArgs e)
+        {
+            if (GV.RadioMode == "true")
+            {
+                chkRadio.Checked = true;
+            }
+            else
+            {
+                chkRadio.Checked = false;
+            }
+        }
+
+        private void btnReadXML_Click(object sender, EventArgs e)
+        {
+            XML.read("Sense.xml", "Root", "Settings", "Radio");
+        }
+
+        private void tmrDebug_Tick(object sender, EventArgs e)
+        {
+            string readText = File.ReadAllText("log.txt");
+            txtDebug.Text = readText;
+        }
+
+
+        }
+    
 }

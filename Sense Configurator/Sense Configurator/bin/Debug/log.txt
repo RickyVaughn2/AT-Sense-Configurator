@@ -1,0 +1,29 @@
+class XML read: Sense.xml Root Settings Radio
+class XML read: Sense.xml Root Settings Radio
+class XML read: Sense.xml Root Settings Radio
+class XML read: Sense.xml Root Settings Radio
+class XML read: Sense.xml Root Settings Radio
+class XML read: Sense.xml Root Settings Radio
+<Root>
+  <Settings>
+    <Radio>false</Radio>
+  </Settings>
+</Root>
+class XML read: Sense.xml Root Settings Radio
+<Root>
+  <Settings>
+    <Radio>false</Radio>
+  </Settings>
+</Root>
+class XML read: Sense.xml Settings Settings Radio
+<Root>
+  <Settings>
+    <Radio>false</Radio>
+  </Settings>
+</Root>
+class XML read: Sense.xml Root Settings Radio
+<Root>
+  <Settings>
+    <Radio>false</Radio>
+  </Settings>
+</Root>

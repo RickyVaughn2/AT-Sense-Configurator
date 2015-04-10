@@ -8,6 +8,8 @@ namespace Sense_Configurator
 {
     class GV
     {
+
+
         public static string connectionString = "Server=tcp:yebr8ev9ew.database.windows.net,1433;Database=ATSense1;User ID=ATAdmin@yebr8ev9ew;Password=A!3rtT3c4*;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;";
         public static string DBID = "0";
         public static string BoxID = "0";
@@ -20,15 +22,15 @@ namespace Sense_Configurator
         public static string SenseDNS2 = "0";
         public static string APIID = "0";
         public static string APIKey = "0";
-        public static string RadioMode = "0";
-        public static string LampMode = "0";
-        public static string BlinkMode = "0";
-        public static string iPadMode = "0";
-        public static string OldestCallMode = "0";
-        public static string AutoUploadMode = "0";
+        public static string RadioMode = "false";
+        public static string LampMode = "false";
+        public static string BlinkMode = "false";
+        public static string iPadMode = "false";
+        public static string OldestCallMode = "false";
+        public static string AutoUploadMode = "false";
         public static string SenseSerialCommPort = "0";
         public static string CurrentMaxAddress = "0";
-        public static string SystemMaxAddress = "0";
+        public static string SystemMaxAddress = "50";
         public static DateTime ConfigurationCreationDate;
         public static DateTime ConfigurationLastEditDate;
         public static string ConfigurationLastEditUsername = "0";

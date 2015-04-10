@@ -1,9 +1,11 @@
 C:\Users\ricky\Documents\GitHub\AT-Sense-Configurator\Sense Configurator\Sense Configurator\bin\Debug\Sense Configurator.exe.config
 C:\Users\ricky\Documents\GitHub\AT-Sense-Configurator\Sense Configurator\Sense Configurator\obj\Debug\Sense Configurator.csprojResolveAssemblyReference.cache
-C:\Users\ricky\Documents\GitHub\AT-Sense-Configurator\Sense Configurator\Sense Configurator\obj\Debug\Sense_Configurator.Form1.resources
 C:\Users\ricky\Documents\GitHub\AT-Sense-Configurator\Sense Configurator\Sense Configurator\obj\Debug\Sense_Configurator.Properties.Resources.resources
 C:\Users\ricky\Documents\GitHub\AT-Sense-Configurator\Sense Configurator\Sense Configurator\obj\Debug\Sense Configurator.csproj.GenerateResource.Cache
 C:\Users\ricky\Documents\GitHub\AT-Sense-Configurator\Sense Configurator\Sense Configurator\bin\Debug\Sense Configurator.exe
 C:\Users\ricky\Documents\GitHub\AT-Sense-Configurator\Sense Configurator\Sense Configurator\bin\Debug\Sense Configurator.pdb
 C:\Users\ricky\Documents\GitHub\AT-Sense-Configurator\Sense Configurator\Sense Configurator\obj\Debug\Sense Configurator.exe
 C:\Users\ricky\Documents\GitHub\AT-Sense-Configurator\Sense Configurator\Sense Configurator\obj\Debug\Sense Configurator.pdb
+C:\Users\ricky\Documents\GitHub\AT-Sense-Configurator\Sense Configurator\Sense Configurator\obj\Debug\Sense_Configurator.frmAddresses.resources
+C:\Users\ricky\Documents\GitHub\AT-Sense-Configurator\Sense Configurator\Sense Configurator\obj\Debug\Sense_Configurator.frmMain.resources
+C:\Users\ricky\Documents\GitHub\AT-Sense-Configurator\Sense Configurator\Sense Configurator\bin\Debug\ChilkatDotNet45.dll

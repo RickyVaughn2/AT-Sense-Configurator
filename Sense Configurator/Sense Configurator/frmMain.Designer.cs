@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtIP = new System.Windows.Forms.TextBox();
             this.txtSubnet = new System.Windows.Forms.TextBox();
             this.txtGateway = new System.Windows.Forms.TextBox();
@@ -39,13 +40,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtApiID = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtApiKey = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtBrand = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtStoreID = new System.Windows.Forms.TextBox();
             this.chkRadio = new System.Windows.Forms.CheckBox();
             this.chkLamp = new System.Windows.Forms.CheckBox();
             this.chkBlink = new System.Windows.Forms.CheckBox();
@@ -53,14 +54,20 @@
             this.chkOldestCall = new System.Windows.Forms.CheckBox();
             this.chkAutoUpload = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtMaxAddress = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtCommPort = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtOccupancyFilter = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.txtBoxID = new System.Windows.Forms.TextBox();
+            this.btnSetAddresses = new System.Windows.Forms.Button();
+            this.btnMakeXML = new System.Windows.Forms.Button();
+            this.tmrUpdate = new System.Windows.Forms.Timer(this.components);
+            this.btnReadXML = new System.Windows.Forms.Button();
+            this.txtDebug = new System.Windows.Forms.TextBox();
+            this.tmrDebug = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // txtIP
@@ -72,6 +79,7 @@
             this.txtIP.TabIndex = 0;
             this.txtIP.Text = "000.000.000.000";
             this.txtIP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtIP.TextChanged += new System.EventHandler(this.txtIP_TextChanged);
             // 
             // txtSubnet
             // 
@@ -82,6 +90,7 @@
             this.txtSubnet.TabIndex = 1;
             this.txtSubnet.Text = "000.000.000.000";
             this.txtSubnet.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSubnet.TextChanged += new System.EventHandler(this.txtSubnet_TextChanged);
             // 
             // txtGateway
             // 
@@ -92,6 +101,7 @@
             this.txtGateway.TabIndex = 2;
             this.txtGateway.Text = "000.000.000.000";
             this.txtGateway.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtGateway.TextChanged += new System.EventHandler(this.txtGateway_TextChanged);
             // 
             // txtDNS1
             // 
@@ -102,6 +112,7 @@
             this.txtDNS1.TabIndex = 3;
             this.txtDNS1.Text = "000.000.000.000";
             this.txtDNS1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDNS1.TextChanged += new System.EventHandler(this.txtDNS1_TextChanged);
             // 
             // txtDNS2
             // 
@@ -112,6 +123,7 @@
             this.txtDNS2.TabIndex = 4;
             this.txtDNS2.Text = "000.000.000.000";
             this.txtDNS2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDNS2.TextChanged += new System.EventHandler(this.txtDNS2_TextChanged);
             // 
             // label1
             // 
@@ -173,14 +185,15 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "API ID";
             // 
-            // textBox6
+            // txtApiID
             // 
-            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(67, 247);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(156, 29);
-            this.textBox6.TabIndex = 10;
-            this.textBox6.Text = "000.000.000.000";
+            this.txtApiID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApiID.Location = new System.Drawing.Point(67, 247);
+            this.txtApiID.Name = "txtApiID";
+            this.txtApiID.Size = new System.Drawing.Size(156, 29);
+            this.txtApiID.TabIndex = 10;
+            this.txtApiID.Text = "000.000.000.000";
+            this.txtApiID.TextChanged += new System.EventHandler(this.txtApiID_TextChanged);
             // 
             // label7
             // 
@@ -192,14 +205,15 @@
             this.label7.TabIndex = 13;
             this.label7.Text = "API Key";
             // 
-            // textBox7
+            // txtApiKey
             // 
-            this.textBox7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(67, 282);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(346, 29);
-            this.textBox7.TabIndex = 12;
-            this.textBox7.Text = "000.000.000.000";
+            this.txtApiKey.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApiKey.Location = new System.Drawing.Point(67, 282);
+            this.txtApiKey.Name = "txtApiKey";
+            this.txtApiKey.Size = new System.Drawing.Size(346, 29);
+            this.txtApiKey.TabIndex = 12;
+            this.txtApiKey.Text = "000.000.000.000";
+            this.txtApiKey.TextChanged += new System.EventHandler(this.txtApiKey_TextChanged);
             // 
             // label8
             // 
@@ -211,15 +225,16 @@
             this.label8.TabIndex = 15;
             this.label8.Text = "Brand";
             // 
-            // textBox8
+            // txtBrand
             // 
-            this.textBox8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(402, 72);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(156, 29);
-            this.textBox8.TabIndex = 14;
-            this.textBox8.Text = "XXX";
-            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBrand.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBrand.Location = new System.Drawing.Point(402, 72);
+            this.txtBrand.Name = "txtBrand";
+            this.txtBrand.Size = new System.Drawing.Size(156, 29);
+            this.txtBrand.TabIndex = 14;
+            this.txtBrand.Text = "XXX";
+            this.txtBrand.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBrand.TextChanged += new System.EventHandler(this.txtBrand_TextChanged);
             // 
             // label9
             // 
@@ -231,15 +246,16 @@
             this.label9.TabIndex = 17;
             this.label9.Text = "Store ID";
             // 
-            // textBox9
+            // txtStoreID
             // 
-            this.textBox9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(402, 103);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(156, 29);
-            this.textBox9.TabIndex = 16;
-            this.textBox9.Text = "XXX";
-            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtStoreID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStoreID.Location = new System.Drawing.Point(402, 103);
+            this.txtStoreID.Name = "txtStoreID";
+            this.txtStoreID.Size = new System.Drawing.Size(156, 29);
+            this.txtStoreID.TabIndex = 16;
+            this.txtStoreID.Text = "XXX";
+            this.txtStoreID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtStoreID.TextChanged += new System.EventHandler(this.txtStoreID_TextChanged);
             // 
             // chkRadio
             // 
@@ -250,6 +266,7 @@
             this.chkRadio.TabIndex = 18;
             this.chkRadio.Text = "Radio";
             this.chkRadio.UseVisualStyleBackColor = true;
+            this.chkRadio.CheckedChanged += new System.EventHandler(this.chkRadio_CheckedChanged);
             // 
             // chkLamp
             // 
@@ -260,6 +277,7 @@
             this.chkLamp.TabIndex = 19;
             this.chkLamp.Text = "Lamp";
             this.chkLamp.UseVisualStyleBackColor = true;
+            this.chkLamp.CheckedChanged += new System.EventHandler(this.chkLamp_CheckedChanged);
             // 
             // chkBlink
             // 
@@ -270,6 +288,7 @@
             this.chkBlink.TabIndex = 20;
             this.chkBlink.Text = "Blink";
             this.chkBlink.UseVisualStyleBackColor = true;
+            this.chkBlink.CheckedChanged += new System.EventHandler(this.chkBlink_CheckedChanged);
             // 
             // chkiPad
             // 
@@ -280,6 +299,7 @@
             this.chkiPad.TabIndex = 21;
             this.chkiPad.Text = "iPad";
             this.chkiPad.UseVisualStyleBackColor = true;
+            this.chkiPad.CheckedChanged += new System.EventHandler(this.chkiPad_CheckedChanged);
             // 
             // chkOldestCall
             // 
@@ -290,6 +310,7 @@
             this.chkOldestCall.TabIndex = 22;
             this.chkOldestCall.Text = "Oldest Call";
             this.chkOldestCall.UseVisualStyleBackColor = true;
+            this.chkOldestCall.CheckedChanged += new System.EventHandler(this.chkOldestCall_CheckedChanged);
             // 
             // chkAutoUpload
             // 
@@ -300,6 +321,7 @@
             this.chkAutoUpload.TabIndex = 23;
             this.chkAutoUpload.Text = "Auto Upload";
             this.chkAutoUpload.UseVisualStyleBackColor = true;
+            this.chkAutoUpload.CheckedChanged += new System.EventHandler(this.chkAutoUpload_CheckedChanged);
             // 
             // label10
             // 
@@ -311,15 +333,16 @@
             this.label10.TabIndex = 27;
             this.label10.Text = "Max SB Address";
             // 
-            // textBox10
+            // txtMaxAddress
             // 
-            this.textBox10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(117, 369);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(156, 29);
-            this.textBox10.TabIndex = 26;
-            this.textBox10.Text = "000.000.000.000";
-            this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMaxAddress.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaxAddress.Location = new System.Drawing.Point(117, 369);
+            this.txtMaxAddress.Name = "txtMaxAddress";
+            this.txtMaxAddress.Size = new System.Drawing.Size(156, 29);
+            this.txtMaxAddress.TabIndex = 26;
+            this.txtMaxAddress.Text = "000.000.000.000";
+            this.txtMaxAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMaxAddress.TextChanged += new System.EventHandler(this.txtMaxAddress_TextChanged);
             // 
             // label11
             // 
@@ -331,15 +354,16 @@
             this.label11.TabIndex = 25;
             this.label11.Text = "Comm Port";
             // 
-            // textBox11
+            // txtCommPort
             // 
-            this.textBox11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(117, 338);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(156, 29);
-            this.textBox11.TabIndex = 24;
-            this.textBox11.Text = "000.000.000.000";
-            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCommPort.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCommPort.Location = new System.Drawing.Point(117, 338);
+            this.txtCommPort.Name = "txtCommPort";
+            this.txtCommPort.Size = new System.Drawing.Size(156, 29);
+            this.txtCommPort.TabIndex = 24;
+            this.txtCommPort.Text = "000.000.000.000";
+            this.txtCommPort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCommPort.TextChanged += new System.EventHandler(this.txtCommPort_TextChanged);
             // 
             // label12
             // 
@@ -351,15 +375,16 @@
             this.label12.TabIndex = 29;
             this.label12.Text = "Occupancy Filter";
             // 
-            // textBox12
+            // txtOccupancyFilter
             // 
-            this.textBox12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(117, 400);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(156, 29);
-            this.textBox12.TabIndex = 28;
-            this.textBox12.Text = "000.000.000.000";
-            this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtOccupancyFilter.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOccupancyFilter.Location = new System.Drawing.Point(117, 400);
+            this.txtOccupancyFilter.Name = "txtOccupancyFilter";
+            this.txtOccupancyFilter.Size = new System.Drawing.Size(156, 29);
+            this.txtOccupancyFilter.TabIndex = 28;
+            this.txtOccupancyFilter.Text = "000.000.000.000";
+            this.txtOccupancyFilter.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtOccupancyFilter.TextChanged += new System.EventHandler(this.txtOccupancyFilter_TextChanged);
             // 
             // btnSave
             // 
@@ -389,21 +414,76 @@
             this.txtBoxID.Size = new System.Drawing.Size(491, 29);
             this.txtBoxID.TabIndex = 31;
             this.txtBoxID.Text = "000.000.000.000";
+            this.txtBoxID.TextChanged += new System.EventHandler(this.txtBoxID_TextChanged);
+            // 
+            // btnSetAddresses
+            // 
+            this.btnSetAddresses.Location = new System.Drawing.Point(464, 351);
+            this.btnSetAddresses.Name = "btnSetAddresses";
+            this.btnSetAddresses.Size = new System.Drawing.Size(97, 43);
+            this.btnSetAddresses.TabIndex = 33;
+            this.btnSetAddresses.Text = "Set Addresses";
+            this.btnSetAddresses.UseVisualStyleBackColor = true;
+            this.btnSetAddresses.Click += new System.EventHandler(this.btnSetAddresses_Click);
+            // 
+            // btnMakeXML
+            // 
+            this.btnMakeXML.Location = new System.Drawing.Point(464, 322);
+            this.btnMakeXML.Name = "btnMakeXML";
+            this.btnMakeXML.Size = new System.Drawing.Size(94, 23);
+            this.btnMakeXML.TabIndex = 34;
+            this.btnMakeXML.Text = "Make XML";
+            this.btnMakeXML.UseVisualStyleBackColor = true;
+            this.btnMakeXML.Click += new System.EventHandler(this.btnMakeXML_Click);
+            // 
+            // tmrUpdate
+            // 
+            this.tmrUpdate.Enabled = true;
+            this.tmrUpdate.Interval = 1000;
+            this.tmrUpdate.Tick += new System.EventHandler(this.tmrUpdate_Tick);
+            // 
+            // btnReadXML
+            // 
+            this.btnReadXML.Location = new System.Drawing.Point(336, 351);
+            this.btnReadXML.Name = "btnReadXML";
+            this.btnReadXML.Size = new System.Drawing.Size(75, 23);
+            this.btnReadXML.TabIndex = 35;
+            this.btnReadXML.Text = "Load XML";
+            this.btnReadXML.UseVisualStyleBackColor = true;
+            this.btnReadXML.Click += new System.EventHandler(this.btnReadXML_Click);
+            // 
+            // txtDebug
+            // 
+            this.txtDebug.Font = new System.Drawing.Font("Trebuchet MS", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDebug.Location = new System.Drawing.Point(599, 12);
+            this.txtDebug.Multiline = true;
+            this.txtDebug.Name = "txtDebug";
+            this.txtDebug.Size = new System.Drawing.Size(445, 431);
+            this.txtDebug.TabIndex = 36;
+            // 
+            // tmrDebug
+            // 
+            this.tmrDebug.Enabled = true;
+            this.tmrDebug.Tick += new System.EventHandler(this.tmrDebug_Tick);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(573, 455);
+            this.ClientSize = new System.Drawing.Size(1056, 455);
+            this.Controls.Add(this.txtDebug);
+            this.Controls.Add(this.btnReadXML);
+            this.Controls.Add(this.btnMakeXML);
+            this.Controls.Add(this.btnSetAddresses);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtBoxID);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.txtOccupancyFilter);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.txtMaxAddress);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.txtCommPort);
             this.Controls.Add(this.chkAutoUpload);
             this.Controls.Add(this.chkOldestCall);
             this.Controls.Add(this.chkiPad);
@@ -411,13 +491,13 @@
             this.Controls.Add(this.chkLamp);
             this.Controls.Add(this.chkRadio);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.txtStoreID);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.txtBrand);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txtApiKey);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtApiID);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -428,9 +508,11 @@
             this.Controls.Add(this.txtGateway);
             this.Controls.Add(this.txtSubnet);
             this.Controls.Add(this.txtIP);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmMain";
             this.Text = "Sense Configurator";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -449,13 +531,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtApiID;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtApiKey;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtBrand;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtStoreID;
         private System.Windows.Forms.CheckBox chkRadio;
         private System.Windows.Forms.CheckBox chkLamp;
         private System.Windows.Forms.CheckBox chkBlink;
@@ -463,14 +545,20 @@
         private System.Windows.Forms.CheckBox chkOldestCall;
         private System.Windows.Forms.CheckBox chkAutoUpload;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtMaxAddress;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtCommPort;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtOccupancyFilter;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtBoxID;
+        private System.Windows.Forms.Button btnSetAddresses;
+        private System.Windows.Forms.Button btnMakeXML;
+        private System.Windows.Forms.Timer tmrUpdate;
+        private System.Windows.Forms.Button btnReadXML;
+        private System.Windows.Forms.TextBox txtDebug;
+        private System.Windows.Forms.Timer tmrDebug;
     }
 }
 
