@@ -63,11 +63,9 @@
             this.label13 = new System.Windows.Forms.Label();
             this.txtBoxID = new System.Windows.Forms.TextBox();
             this.btnSetAddresses = new System.Windows.Forms.Button();
-            this.btnMakeXML = new System.Windows.Forms.Button();
-            this.tmrUpdate = new System.Windows.Forms.Timer(this.components);
-            this.btnReadXML = new System.Windows.Forms.Button();
             this.txtDebug = new System.Windows.Forms.TextBox();
             this.tmrDebug = new System.Windows.Forms.Timer(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtIP
@@ -426,38 +424,13 @@
             this.btnSetAddresses.UseVisualStyleBackColor = true;
             this.btnSetAddresses.Click += new System.EventHandler(this.btnSetAddresses_Click);
             // 
-            // btnMakeXML
-            // 
-            this.btnMakeXML.Location = new System.Drawing.Point(464, 322);
-            this.btnMakeXML.Name = "btnMakeXML";
-            this.btnMakeXML.Size = new System.Drawing.Size(94, 23);
-            this.btnMakeXML.TabIndex = 34;
-            this.btnMakeXML.Text = "Make XML";
-            this.btnMakeXML.UseVisualStyleBackColor = true;
-            this.btnMakeXML.Click += new System.EventHandler(this.btnMakeXML_Click);
-            // 
-            // tmrUpdate
-            // 
-            this.tmrUpdate.Enabled = true;
-            this.tmrUpdate.Interval = 1000;
-            this.tmrUpdate.Tick += new System.EventHandler(this.tmrUpdate_Tick);
-            // 
-            // btnReadXML
-            // 
-            this.btnReadXML.Location = new System.Drawing.Point(336, 351);
-            this.btnReadXML.Name = "btnReadXML";
-            this.btnReadXML.Size = new System.Drawing.Size(75, 23);
-            this.btnReadXML.TabIndex = 35;
-            this.btnReadXML.Text = "Load XML";
-            this.btnReadXML.UseVisualStyleBackColor = true;
-            this.btnReadXML.Click += new System.EventHandler(this.btnReadXML_Click);
-            // 
             // txtDebug
             // 
             this.txtDebug.Font = new System.Drawing.Font("Trebuchet MS", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDebug.Location = new System.Drawing.Point(599, 12);
             this.txtDebug.Multiline = true;
             this.txtDebug.Name = "txtDebug";
+            this.txtDebug.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtDebug.Size = new System.Drawing.Size(445, 431);
             this.txtDebug.TabIndex = 36;
             // 
@@ -466,14 +439,20 @@
             this.tmrDebug.Enabled = true;
             this.tmrDebug.Tick += new System.EventHandler(this.tmrDebug_Tick);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(458, 256);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 37;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1056, 455);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtDebug);
-            this.Controls.Add(this.btnReadXML);
-            this.Controls.Add(this.btnMakeXML);
             this.Controls.Add(this.btnSetAddresses);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtBoxID);
@@ -554,11 +533,9 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtBoxID;
         private System.Windows.Forms.Button btnSetAddresses;
-        private System.Windows.Forms.Button btnMakeXML;
-        private System.Windows.Forms.Timer tmrUpdate;
-        private System.Windows.Forms.Button btnReadXML;
         private System.Windows.Forms.TextBox txtDebug;
         private System.Windows.Forms.Timer tmrDebug;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

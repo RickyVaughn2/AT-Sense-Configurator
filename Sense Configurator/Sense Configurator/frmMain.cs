@@ -268,17 +268,38 @@ namespace Sense_Configurator
 
         private void chkRadio_CheckedChanged(object sender, EventArgs e)
         {
-            GV.RadioMode = chkRadio.CheckState.ToString();
+            if (chkRadio.Checked)
+            {
+                GV.RadioMode = "true";
+            }
+            else
+            {
+                GV.RadioMode = "false";
+            }
         }
 
         private void chkLamp_CheckedChanged(object sender, EventArgs e)
         {
-            GV.LampMode = chkLamp.CheckState.ToString();
+            if (chkLamp.Checked)
+            {
+                GV.LampMode = "true";
+            }
+            else
+            {
+                GV.LampMode = "false";
+            }
         }
 
         private void chkBlink_CheckedChanged(object sender, EventArgs e)
         {
-            GV.BlinkMode = chkBlink.CheckState.ToString();
+            if (chkBlink.Checked)
+            {
+                GV.BlinkMode = "true";
+            }
+            else
+            {
+                GV.BlinkMode = "false";
+            }
         }
 
         private void chkiPad_CheckedChanged(object sender, EventArgs e)
@@ -288,12 +309,26 @@ namespace Sense_Configurator
 
         private void chkOldestCall_CheckedChanged(object sender, EventArgs e)
         {
-            GV.OldestCallMode = chkOldestCall.CheckState.ToString();
+            if (chkOldestCall.Checked)
+            {
+                GV.OldestCallMode = "true";
+            }
+            else
+            {
+                GV.OldestCallMode = "false";
+            }
         }
 
         private void chkAutoUpload_CheckedChanged(object sender, EventArgs e)
         {
-            GV.AutoUploadMode = chkAutoUpload.CheckState.ToString();
+            if (chkAutoUpload.Checked)
+            {
+                GV.AutoUploadMode = "true";
+            }
+            else
+            {
+                GV.AutoUploadMode = "false";
+            }
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -369,28 +404,6 @@ namespace Sense_Configurator
             {
                 chkAutoUpload.Checked = false;
             }
-        }
-
-        private void btnMakeXML_Click(object sender, EventArgs e)
-        {
-            XML.write("sense.xml", "Root", "Settings", "Radio", "false");
-        }
-
-        private void tmrUpdate_Tick(object sender, EventArgs e)
-        {
-            if (GV.RadioMode == "true")
-            {
-                chkRadio.Checked = true;
-            }
-            else
-            {
-                chkRadio.Checked = false;
-            }
-        }
-
-        private void btnReadXML_Click(object sender, EventArgs e)
-        {
-            XML.read("Sense.xml", "Root", "Settings", "Radio");
         }
 
         private void tmrDebug_Tick(object sender, EventArgs e)

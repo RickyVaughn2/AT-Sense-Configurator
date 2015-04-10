@@ -27,3 +27,51 @@ class XML read: Sense.xml Root Settings Radio
     <Radio>false</Radio>
   </Settings>
 </Root>
+class XML read: Sense.xml Root Settings Radio
+<Root>
+  <Settings>
+    <Radio>false</Radio>
+  </Settings>
+</Root>
+class XML read: Sense.xml Root Settings Radio
+class XML read: Sense.xml Root Settings Radio
+class XML read: Sense.xml Root Settings Radio
+<Root>
+  <Settings>
+    <Radio>false</Radio>
+  </Settings>
+</Root>
+class XML read: Sense.xml Root Settings Radio
+<Root>
+  <Settings>
+    <Radio>false</Radio>
+  </Settings>
+</Root>
+<Root>
+  <Settings Radio="false" />
+</Root>
+<Root>
+  <Settings>
+    <Radio>false</Radio>
+  </Settings>
+</Root>
+<Root>
+  <Settings>
+    <Radio>false</Radio>
+  </Settings>
+</Root>
+<Root>
+  <Settings>
+    <Radio>false</Radio>
+  </Settings>
+</Root>
+<Root>
+  <Settings>
+    <Radio>false</Radio>
+  </Settings>
+</Root>
+<Root>
+  <Settings>
+    <Radio>false</Radio>
+  </Settings>
+</Root>
