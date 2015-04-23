@@ -333,7 +333,16 @@ namespace Sense_Configurator
 
         private void frmMain_Load(object sender, EventArgs e)
         {
+            //read ini file
+            IniFile ini = new IniFile();
+            ini.FileName = "configurator_v.ini";
 
+            GV.Version = ini.ReadString("CONFIGURATOR", "VERSION");
+            GV.ReleaseDate = ini.ReadString("CONFIGURATOR", "RELEASEDATE");
+            GV.ReleaseNotes = ini.ReadString("CONFIGURATOR", "RELEASENOTES");
+
+            this.Text = "Sense Configurator  version: " + GV.Version;
+            
             //create log file
             //using (File.Create("log.txt")) ;
 
@@ -410,6 +419,33 @@ namespace Sense_Configurator
         {
             string readText = File.ReadAllText("log.txt");
             txtDebug.Text = readText;
+        }
+
+        private void tmrUpdate_Tick(object sender, EventArgs e)
+        {
+            FTP.DownloadFile("23.99.221.29", "/home/ATAdmin/configurator", "ATAdmin", "A!3rtT3c4*", "configurator_c.ini");
+            IniFile configurator_v = new IniFile();
+            configurator_v.FileName = "configurator_v.ini";
+            IniFile configurator_c = new IniFile();
+            configurator_c.FileName = "configurator_c.ini";
+
+            int cv = configurator_v.ReadInteger("CONFIGURATOR", "VERSION");
+            int cc = configurator_c.ReadInteger("CONFIGURATOR", "VERSION");
+            
+            if (cc > cv)
+            {
+                //update available
+                tmrUpdate.Enabled = false;
+                GV.UpdateAvailable = cc.ToString();
+                btnUpdate.Visible = true;
+                btnUpdate.Text = "UPDATE" + Environment.NewLine + "Version: " + cc.ToString();
+            }
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            FTP.DownloadDirectory("23.99.221.29", "/home/ATAdmin/configurator/" + GV.UpdateAvailable, "ATAdmin", "A!3rtT3c4*");
         }
 
 

@@ -9,3 +9,4 @@ C:\Users\ricky\Documents\GitHub\AT-Sense-Configurator\Sense Configurator\Sense C
 C:\Users\ricky\Documents\GitHub\AT-Sense-Configurator\Sense Configurator\Sense Configurator\obj\Debug\Sense_Configurator.frmAddresses.resources
 C:\Users\ricky\Documents\GitHub\AT-Sense-Configurator\Sense Configurator\Sense Configurator\obj\Debug\Sense_Configurator.frmMain.resources
 C:\Users\ricky\Documents\GitHub\AT-Sense-Configurator\Sense Configurator\Sense Configurator\bin\Debug\ChilkatDotNet45.dll
+C:\Users\ricky\Documents\GitHub\AT-Sense-Configurator\Sense Configurator\Sense Configurator\bin\Debug\IniFile.dll

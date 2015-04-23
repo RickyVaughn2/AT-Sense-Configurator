@@ -36,6 +36,9 @@
     <Reference Include="ChilkatDotNet45">
       <HintPath>..\..\..\..\..\Google Drive\AlertTech Remote Desktop\Software Development\controls\ChilkatDotNet45-vs2013-9.5.0-win32\ChilkatDotNet45.dll</HintPath>
     </Reference>
+    <Reference Include="IniFile">
+      <HintPath>..\..\..\..\IniFile.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -60,6 +63,7 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FTP.cs" />
     <Compile Include="GV.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Program.cs" />
@@ -79,6 +83,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="bin\Debug\configurator_v.ini" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

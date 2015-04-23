@@ -35,6 +35,13 @@ namespace Sense_Configurator
         public static DateTime ConfigurationLastEditDate;
         public static string ConfigurationLastEditUsername = "0";
         public static string OccupancyFilter = "0";
+        //ini
+        public static string Version = "";
+        public static string ReleaseDate = "";
+        public static string ReleaseTime = "";
+        public static string ReleaseNotes="";
+        public static string UpdateAvailable = "";
+
 
         //devices
         public static string ADR1GRP = "0";
